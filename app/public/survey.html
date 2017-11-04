@@ -21,7 +21,7 @@
 
 	<hr>
 
-	<form>
+	<form method = "POST" action = "/api/potentialFriends">
 		<div class = " form-group">
 			<h2>About You</h2>
 			<label for = "staticName">Name(Required)</label>
@@ -36,47 +36,204 @@
 
 			<h3>Question 1</h3>
 
-			How much do you like pizza?
+			<label>How much do you like pizza?</label>
+
+			<select class = "form-control" id = "q1" name = "scores[0]">
+					<option>1 (Strongly Disagree)</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5 (Strongly Agree</option>
+
+
+			</select>
 
 			<h3>Question 2</h3>
 
-			How much do you like the beach?
+			<label>How much do you like the beach?</label>
+
+			<select class = "form-control" id = "q2" name = "scores[1]">
+					<option>1 (Strongly Disagree)</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5 (Strongly Agree</option>
+
+
+			</select>
 
 			<h3>Question 3</h3>
 
-			How much do you like traveling?
+			<label>How much do you like the beach?</label>
+
+			<select class = "form-control" id = "q3" name = "scores[2]">
+					<option>1 (Strongly Disagree)</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5 (Strongly Agree</option>
+
+
+			</select>
 
 			<h3>Question 4</h3>
 
-			How much do you like pizza?
+			<label>How much do you like pizza?</label>
+
+			<select class = "form-control" id = "q4" name = "scores[3]">
+					<option>1 (Strongly Disagree)</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5 (Strongly Agree</option>
+
+
+			</select>
 
 			<h3>Question 5</h3>
 
-			How much do you like pies?
+			<label>How much do you like pizza?</label>
+
+			<select class = "form-control" id = "q5" name = "scores[4]">
+					<option>1 (Strongly Disagree)</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5 (Strongly Agree</option>
+
+
+			</select>
 
 			<h3>Question 6</h3>
 
-			How much do you like cheese?
+			<label>How much do you like pizza?</label>
+
+			<select class = "form-control" id = "q6" name = "scores[5]">
+					<option>1 (Strongly Disagree)</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5 (Strongly Agree</option>
+
+
+			</select>
 
 			<h3>Question 7</h3>
 
-			How much do you like summer?
+			<label>How much do you like pizza?</label>
+
+			<select class = "form-control" id = "q7" name = "scores[6]">
+					<option>1 (Strongly Disagree)</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5 (Strongly Agree</option>
+
+
+			</select>
 
 			<h3>Question 8</h3>
 
-			How much of a weirdo are you?
+			<label>How much do you like pizza?</label>
+
+			<select class = "form-control" id = "q8" name = "scores[7]">
+					<option>1 (Strongly Disagree)</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5 (Strongly Agree</option>
+
+
+			</select>
 
 			<h3>Question 9</h3>
 
-			How much do you like dogs?
+			<label>How much do you like pizza?</label>
+
+			<select class = "form-control" id = "q9" name = "scores[8]">
+					<option>1 (Strongly Disagree)</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5 (Strongly Agree</option>
+
+
+			</select>
 
 			<h3>Question 10</h3>
 
-			How much did you like this survey?
+			<label>How much do you like pizza?</label>
+
+			<select class = "form-control" id = "q10" name = "scores[9]">
+					<option>1 (Strongly Disagree)</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5 (Strongly Agree</option>
+
+
+			</select>
+
+			<br>
+
+			<input type = "submit" class = "btn btn-primary" value = "Request Match" id = "submit">
 
 		</div>
 
 	</form>
+
+<div id="bestMatchModal" class="modal fade" role="dialog">
+
+	<div class="modal-dialog">
+
+		<div class="modal-content">
+
+			<div class="modal-header">
+
+				<button type="button" class="close" data-dismiss="modal">X</button>
+
+				<h2 class="modal-title">Best Match</h2>
+
+			</div>
+
+			<div class="modal-body">
+
+				<h2 id="bestMatchName"></h2>
+
+				<img id="bestMatchImg" src="https://www.google.com/search?q=huskies&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjgmevIjqXXAhUBSWMKHdKfBO0Q_AUICigB&biw=767&bih=741#imgdii=U_tljlsS2MS0oM:&imgrc=Yej91j8Lo6YBkM:" onError="this.src='https://www.google.com/search?q=huskies&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjgmevIjqXXAhUBSWMKHdKfBO0Q_AUICigB&biw=767&bih=741#imgdii=VIJBGJNdnqwZaM:&imgrc=Yej91j8Lo6YBkM:'" width=500px alt="Best Match">
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<script type="text/javascript">
+
+	$('#submit').on("click", function() {
+
+		var userInput = {
+
+			name: $('#name').val().trim(),
+			photo: $('#photo').val().trim(),
+			scores: [$('#question01').val().trim(), $('#question02').val().trim(), $('#question03').val().trim(), $('#question04').val().trim(), $('#question05').val().trim(), $('#question06').val().trim(), $('#question07').val().trim(), $('#question08').val().trim(), $('#question09').val().trim(), $('#question10').val().trim()]
+		}
+
+		var currentURL = window.location.origin;
+
+		$.post(currentURL + '/api/friends', userInput, function(data) {
+			$("#bestMatchName").text(data.name);
+			$("#bestMatchImg").attr("src", data.photo);
+			$("#bestMatchModal").modal("show");
+		});
+		return false;
+	});
+	
+</script>
+
+
 
 </body>
 </html>
